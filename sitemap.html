@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sitemap — ORBIS</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <span class="logo-mark">ORBIS</span>
+      <span class="logo-strap">A 3D Planetary Observatory</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Viewer</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="originality.html">Originality</a></li>
+        <li><a href="references.html">References</a></li>
+        <li><a href="sitemap.html" class="active">Sitemap</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <article class="content-page">
+      <h1>Sitemap</h1>
+      <p class="subtitle">Project Structure</p>
+
+      <h2>Pages</h2>
+      <ul>
+        <li><a href="index.html">Viewer</a> — the 3D application itself
+            (catalogue, stage, controls)</li>
+        <li><a href="about.html">About</a> — overview of the project, how it
+            was built, and design philosophy</li>
+        <li><a href="originality.html">Statement of Originality</a> —
+            declaration of authorship and third-party attribution</li>
+        <li><a href="references.html">References</a> — libraries, tutorials,
+            textures, and data sources</li>
+        <li><a href="sitemap.html">Sitemap</a> — this page</li>
+        <li><a href="submission.html">Submission</a> — submission details and
+            archive links</li>
+      </ul>
+
+      <h2>File structure</h2>
+      <pre style="font-family: var(--font-mono); font-size: 0.8rem; line-height: 1.7; color: var(--text-secondary); background: var(--bg-panel); border: 1px solid var(--border); padding: 1.25rem;">
+3d-app/
+├── index.html              main 3D viewer
+├── about.html
+├── originality.html
+├── references.html
+├── sitemap.html
+├── submission.html
+│
+├── css/
+│   └── style.css           all styling
+│
+├── js/
+│   └── main.js             Three.js scene + UI wiring
+│
+├── models/                 GLB exports from Blender
+│   ├── earth.glb
+│   ├── mars.glb
+│   ├── jupiter.glb
+│   └── moon.glb
+│
+├── textures/               planet surface maps
+│   ├── earth_color.jpg
+│   ├── mars_color.jpg
+│   ├── jupiter_color.jpg
+│   └── moon_color.jpg
+│
+├── blender/                .blend source files
+│   ├── earth.blend
+│   ├── mars.blend
+│   ├── jupiter.blend
+│   └── moon.blend
+│
+└── README.md
+      </pre>
+
+      <h2>Interaction map</h2>
+      <ul>
+        <li><strong>Catalogue panel (left)</strong> — click any specimen to load
+            it on the stage</li>
+        <li><strong>Stage (centre)</strong> — drag to rotate, scroll to zoom,
+            click model for a spin burst</li>
+        <li><strong>Controls panel (right)</strong> — wireframe toggle,
+            auto-rotate toggle, sun and ambient light sliders</li>
+        <li><strong>Top navigation</strong> — switches between content pages</li>
+      </ul>
+    </article>
+  </main>
+
+  <footer>
+    ORBIS · 3D APPS ASSIGNMENT 2026 · UNIVERSITY OF SUSSEX
+  </footer>
+
+</body>
+</html>

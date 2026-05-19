@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — ORBIS</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <span class="logo-mark">ORBIS</span>
+      <span class="logo-strap">A 3D Planetary Observatory</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Viewer</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="originality.html">Originality</a></li>
+        <li><a href="references.html">References</a></li>
+        <li><a href="sitemap.html">Sitemap</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <article class="content-page">
+      <h1>About ORBIS</h1>
+      <p class="subtitle">A 3D Planetary Observatory · 2026</p>
+
+      <p>
+        ORBIS is an interactive web based 3D application. It presents a small catalogue of
+        astronomical bodies — Earth, Mars, Jupiter, and the Moon — each
+        rendered in real time in the browser using WebGL.
+      </p>
+
+      <p>
+        Visitors can rotate, zoom, and inspect each model, toggle between solid
+        and wireframe views, adjust lighting in real time, and switch between
+        specimens via the catalogue panel. Clicking directly on a model gives
+        it a brief spin burst as visual feedback.
+      </p>
+
+      <h2>How it was built</h2>
+      <p>
+        The application is built from plain HTML5, CSS3, and JavaScript. There
+        is no build step and no framework — the entire site runs by opening
+        <code>index.html</code> in a browser.
+      </p>
+
+      <p>3D content is rendered with the <a href="https://threejs.org/">Three.js</a>
+        library (r160), loaded via an ES module import map directly from a CDN.
+        Models are authored in Blender and exported as glTF/GLB. The Three.js
+        scene composites them with directional and ambient lighting, and uses
+        an <code>OrbitControls</code> rig to handle camera rotation and zoom.
+      </p>
+
+      <h2>The catalogue</h2>
+      <p>
+        Each entry in the catalogue is described by a JavaScript object holding
+        its name, descriptive metadata, telemetry data, rotation speed, and a
+        path to its GLB file. Switching specimens disposes the previous model's
+        GPU resources before loading the next, so memory usage stays predictable
+        no matter how many times the user browses.
+      </p>
+
+      <h2>Design philosophy</h2>
+      <p>
+        The interface borrows from the visual language of scientific instruments
+        and old astronomical catalogues — a serif display face, monospaced data
+        readouts, a restrained palette, and corner crops on the viewing stage,
+        rather than the saturated colour and neon glow that dominate "space"
+        themed websites. The aim is to make the 3D content the loudest element
+        on screen.
+      </p>
+
+      <blockquote>
+        We are made of star stuff. We are a way for the cosmos to know itself.
+      </blockquote>
+
+      <h2>Tested on</h2>
+      <p>
+        Verified to run on current versions of Chrome, Firefox, Safari, and
+        Edge on desktop, and on mobile Safari and Chrome on Android. WebGL 2
+        support is required.
+      </p>
+    </article>
+  </main>
+
+  <footer>
+    ORBIS · 3D APPS ASSIGNMENT 2026 · UNIVERSITY OF SUSSEX
+  </footer>
+
+</body>
+</html>

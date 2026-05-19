@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ORBIS — A 3D Planetary Observatory</title>
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Three.js loaded from a CDN via an import map (no build step needed) -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <span class="logo-mark">ORBIS</span>
+      <span class="logo-strap">A 3D Planetary Observatory</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Viewer</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="originality.html">Originality</a></li>
+        <li><a href="references.html">References</a></li>
+        <li><a href="sitemap.html">Sitemap</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="app-grid">
+
+      <!-- left: catalogue of planets -->
+      <aside class="panel">
+        <h2 class="panel-title">Catalogue</h2>
+        <div class="gallery" id="gallery"></div>
+      </aside>
+
+      <!-- middle: 3D stage -->
+      <section class="stage">
+        <div class="stage-info">
+          <div class="object-name" id="object-name">Earth</div>
+          <div class="object-meta" id="object-meta">Specimen 001 / Terrestrial</div>
+        </div>
+        <div id="canvas-container"></div>
+      </section>
+
+      <!-- right: controls and info -->
+      <aside class="panel">
+        <h2 class="panel-title">Controls</h2>
+
+        <div class="controls-section">
+          <div class="section-label">Display</div>
+          <button class="btn" id="btn-wireframe">Wireframe</button>
+          <button class="btn active" id="btn-rotate">Auto-rotate</button>
+        </div>
+
+        <div class="controls-section">
+          <div class="section-label">Lighting</div>
+          <div class="slider-row">
+            <label>Sun</label>
+            <input type="range" id="sun-intensity" min="0" max="3" step="0.05" value="1.2" />
+            <span class="value" id="sun-value">1.2</span>
+          </div>
+          <div class="slider-row">
+            <label>Ambient</label>
+            <input type="range" id="amb-intensity" min="0" max="2" step="0.05" value="0.25" />
+            <span class="value" id="amb-value">0.25</span>
+          </div>
+        </div>
+
+        <div class="controls-section">
+          <div class="section-label">Telemetry</div>
+          <div class="data-table" id="data-table"></div>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <footer>
+    ORBIS · 3D APPS ASSIGNMENT 2026 · UNIVERSITY OF SUSSEX
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
