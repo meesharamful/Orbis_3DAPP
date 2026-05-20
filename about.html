@@ -27,69 +27,43 @@
   <main>
     <article class="content-page">
       <h1>About ORBIS</h1>
-      <p class="subtitle">A 3D Planetary Observatory · 2026</p>
+  <p class="subtitle">A 3D Planetary Observatory</p>
 
-      <p>
-        ORBIS is an interactive web based 3D application. It presents a small catalogue of
-        astronomical bodies — Earth, Mars, Jupiter, and the Moon — each
-        rendered in real time in the browser using WebGL.
-      </p>
+  <p>ORBIS is a web based 3D application. It lets you rotate, zoom, and inspect four bodies in our
+  solar system - Earth, Mars, Jupiter, and the Moon and tweak the
+  lighting and view to see them how you want.</p>
 
-      <p>
-        Visitors can rotate, zoom, and inspect each model, toggle between solid
-        and wireframe views, adjust lighting in real time, and switch between
-        specimens via the catalogue panel. Clicking directly on a model gives
-        it a brief spin burst as visual feedback.
-      </p>
+  <h2>Why planets?</h2>
 
-      <h2>How it was built</h2>
-      <p>
-        The application is built from plain HTML5, CSS3, and JavaScript. There
-        is no build step and no framework — the entire site runs by opening
-        <code>index.html</code> in a browser.
-      </p>
+  <p>I've always been interested in space and planets. I used
+  to read about them because I couldn't quite imagine that they
+  were real.</p>
 
-      <p>3D content is rendered with the <a href="https://threejs.org/">Three.js</a>
-        library (r160), loaded via an ES module import map directly from a CDN.
-        Models are authored in Blender and exported as glTF/GLB. The Three.js
-        scene composites them with directional and ambient lighting, and uses
-        an <code>OrbitControls</code> rig to handle camera rotation and zoom.
-      </p>
+  <h2>How it was built</h2>
 
-      <h2>The catalogue</h2>
-      <p>
-        Each entry in the catalogue is described by a JavaScript object holding
-        its name, descriptive metadata, telemetry data, rotation speed, and a
-        path to its GLB file. Switching specimens disposes the previous model's
-        GPU resources before loading the next, so memory usage stays predictable
-        no matter how many times the user browses.
-      </p>
+  <p>The app uses Three.js to render WebGL scenes in the browser. The
+  planets themselves were modelled in Blender, each one is a UV sphere
+  with a texture map wrapped around it. The website loads them as GLB
+  files and centres them automatically, so they all sit in the same place
+  regardless of how I exported them.</p>
 
-      <h2>Design philosophy</h2>
-      <p>
-        The interface borrows from the visual language of scientific instruments
-        and old astronomical catalogues — a serif display face, monospaced data
-        readouts, a restrained palette, and corner crops on the viewing stage,
-        rather than the saturated colour and neon glow that dominate "space"
-        themed websites. The aim is to make the 3D content the loudest element
-        on screen.
-      </p>
+  <p>The catalogue on the left switches between models. The controls on
+  the right toggle wireframe, auto rotate, and the lighting.</p>
 
-      <blockquote>
-        We are made of star stuff. We are a way for the cosmos to know itself.
-      </blockquote>
+  <h2>What I learned</h2>
 
-      <h2>Tested on</h2>
-      <p>
-        Verified to run on current versions of Chrome, Firefox, Safari, and
-        Edge on desktop, and on mobile Safari and Chrome on Android. WebGL 2
-        support is required.
-      </p>
+<p>UV unwrapping was the bit I hadn't done before. It wasn't actually
+difficult once I understood what it was. You're telling Blender how
+a flat image should wrap onto a 3D surface. Once that clicked, the
+other three planets went quickly.</p>
+
+<p>Tested in current versions of Chrome, Firefox, and Safari on desktop,
+and on mobile Safari and Chrome on Android.</p>
     </article>
   </main>
 
   <footer>
-    ORBIS · 3D APPS ASSIGNMENT 2026 · UNIVERSITY OF SUSSEX
+    ORBIS · 3D WEB APPS · UNIVERSITY OF SUSSEX
   </footer>
 
 </body>
