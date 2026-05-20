@@ -41,9 +41,7 @@
       <ul>
         <li><strong>Title:</strong> ORBIS — A 3D Planetary Observatory</li>
         <li><strong>3D format:</strong> Three.js (WebGL, glTF/GLB models)</li>
-        <li><strong>3D models:</strong> Earth, Mars, Jupiter, Luna (Moon)</li>
-        <li><strong>Complex model:</strong> Earth — multi-layer composition
-            with displaced continents and a translucent cloud shell</li>
+        <li><strong>3D models:</strong> Earth, Mars, Jupiter,Moon</li>
       </ul>
 
       <h2>Archive locations</h2>
@@ -63,11 +61,11 @@
 
       <h2>How to run</h2>
       <p>
-        The site is plain HTML/CSS/JS with no build step. Because it uses ES
-        modules, it must be served from a local web server rather than opened
-        from the filesystem. From the project root:
+        The site uses ES modules so it must be served via a local web server
+        rather than opened directly from the file system. The easiest way is to
+        open the project folder in VS Code and use the "Live Server" extension —
+        right-click <code>index.html</code> and choose "Open with Live Server".
       </p>
-      <p>
         <code>python3 -m http.server 8000</code><br />
         then visit <code>http://localhost:8000</code>
       </p>
