@@ -54,7 +54,7 @@ const planets = [
   },
   {
     id: 'moon',
-    name: 'Luna',
+    name: 'Moon',
     meta: 'Specimen 004 / Satellite',
     color: 0xa8a49d,
     data: {
